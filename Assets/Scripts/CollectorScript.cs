@@ -16,6 +16,7 @@ public class CollectorScript : MonoBehaviour
     public float moveSpeedChange;
     public float attackSpeedChange;
     public float bulletSizeChange;
+    public int bulletNum; 
 
 
     // Start is called before the first frame update
@@ -37,6 +38,7 @@ public class CollectorScript : MonoBehaviour
             GameController.MoveSpeedChange(moveSpeedChange);
             GameController.FireRateChange(attackSpeedChange);
             GameController.BulletSizeChange(bulletSizeChange);
+            GameController.BulletNumChange(bulletNum);
             GameController.instance.UpdateCollectedItems(this);
 
             Destroy(gameObject);

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public enum EnemyState
 {
     Idle,
@@ -12,7 +14,8 @@ public enum EnemyState
 public enum EnemyType
 {
     Melee,
-    Ranged
+    Ranged,
+    Boss
 };
 public class EnemyScript : MonoBehaviour
 {
@@ -30,6 +33,7 @@ public class EnemyScript : MonoBehaviour
     public bool notInRoom = false; 
     public float coolDown;
     public Animator animator;
+    public int numOfBullets = 0;
 
 
     public GameObject bulletPreFab; 
@@ -135,6 +139,10 @@ public class EnemyScript : MonoBehaviour
                     bullet.GetComponent<BulletScript>().isEnemyBullet = true;
                     StartCoroutine(CoolDown());
                 break;
+                case (EnemyType.Boss):
+                    GameController.DamagePlayer(2);
+                    StartCoroutine(CoolDown());
+                break;
             }
         }
         
@@ -156,7 +164,24 @@ public class EnemyScript : MonoBehaviour
     public void Death()
     {
         RoomController.instance.StartCoroutine(RoomController.instance.RoomCoroutine());
-        Destroy(gameObject);
+        switch (enemyType)
+        {
+            case (EnemyType.Boss):
+                numOfBullets++;
+                if(numOfBullets == 10)
+                {
+                    Destroy(gameObject);
+                    //SceneManager.LoadScene(7);
+                }
+                break;
+            case (EnemyType.Melee):
+                Destroy(gameObject);
+                break;
+            case(EnemyType.Ranged):
+                Destroy(gameObject);
+                break;
+        }
+        
        
     }
 }

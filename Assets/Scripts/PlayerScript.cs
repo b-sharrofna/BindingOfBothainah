@@ -43,6 +43,8 @@ public class PlayerScript : MonoBehaviour
             lastFire = Time.time;
         }
 
+        
+
         //rb.velocity = new Vector3(hor * speed, ver * speed, 0);
 
         collectedText.text = "Items collected: " + collectedAmount; 
@@ -63,5 +65,6 @@ public class PlayerScript : MonoBehaviour
             (y < 0) ? Mathf.Floor(y) * bulletSpeed : Mathf.Ceil(y) * bulletSpeed, 0);
     }
 
+   
 
 }

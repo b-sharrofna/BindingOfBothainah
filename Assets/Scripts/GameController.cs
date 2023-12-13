@@ -15,10 +15,11 @@ public class GameController : MonoBehaviour
     private static float moveSpeed = 5.0f;
     private static float fireRate = 0.5f;
     private static float bulletSize = 0.5f;
-
+    private static int numOfBullets = 0; 
     private bool bootCollected = false;
     private bool potionCollected = false;
     private bool screwCollected = false;
+    private bool eyeCollected = false;
 
     public List<string> collectedNames = new List<string>(); 
 
@@ -28,6 +29,7 @@ public class GameController : MonoBehaviour
     public static float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     public static float FireRate { get => fireRate; set => fireRate = value; }
     public static float BulletSize { get => bulletSize; set => bulletSize = value; }
+    public static float Bullets { get => numOfBullets; set => numOfBullets = value; }
 
     // Start is called before the first frame update
     void Awake()
@@ -69,6 +71,11 @@ public class GameController : MonoBehaviour
     {
         bulletSize += size;
     }
+
+    public static void BulletNumChange(int num)
+    {
+        numOfBullets += num;
+    }
     public void UpdateCollectedItems(CollectorScript item)
     {
         collectedNames.Add(item.item.name);
@@ -86,6 +93,10 @@ public class GameController : MonoBehaviour
                 case "Potion":
                     potionCollected = true;
                     break;
+                case "Eye":
+                    eyeCollected = true;
+                    break; 
+
             }
         }
         if(bootCollected && screwCollected)
