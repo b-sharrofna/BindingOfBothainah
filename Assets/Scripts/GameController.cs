@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
     public static float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     public static float FireRate { get => fireRate; set => fireRate = value; }
     public static float BulletSize { get => bulletSize; set => bulletSize = value; }
-    public static float Bullets { get => numOfBullets; set => numOfBullets = value; }
+    public static int Bullets { get => numOfBullets; set => numOfBullets = value; }
 
     // Start is called before the first frame update
     void Awake()

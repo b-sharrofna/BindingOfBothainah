@@ -725,6 +725,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871446229}
   m_CullTransparentMesh: 1
+--- !u!95 &941991474 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7394616839472271732, guid: aa4a84ce951a743898cb9d31ce6faba7, type: 3}
+  m_PrefabInstance: {fileID: 709273128950384460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &970922580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,6 +1859,22 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5646550004601117235, guid: aa4a84ce951a743898cb9d31ce6faba7, type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646550004601117235, guid: aa4a84ce951a743898cb9d31ce6faba7, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 941991474}
+    - target: {fileID: 5646550004601117235, guid: aa4a84ce951a743898cb9d31ce6faba7, type: 3}
+      propertyPath: notInRoom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646550004601117235, guid: aa4a84ce951a743898cb9d31ce6faba7, type: 3}
+      propertyPath: playerPos
+      value: 
+      objectReference: {fileID: 736096760}
     - target: {fileID: 9026479870657438441, guid: aa4a84ce951a743898cb9d31ce6faba7, type: 3}
       propertyPath: m_Name
       value: MeleeEnemy
@@ -1863,6 +1884,96 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa4a84ce951a743898cb9d31ce6faba7, type: 3}
+--- !u!1001 &4264981315197984907
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4155110600314088977, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_Name
+      value: Eye
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155110600314088977, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550958054639986411, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4155110600314088977, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4264981315197984909}
+  m_SourcePrefab: {fileID: 100100000, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+--- !u!1 &4264981315197984908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4155110600314088977, guid: 8107ba61db72043469ae3ae6eb729832, type: 3}
+  m_PrefabInstance: {fileID: 4264981315197984907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4264981315197984909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4264981315197984908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5dfe1adcc5324be8abe7f0fc589193c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    name: Eye
+    description: x3 Bullets
+    itemSprite: {fileID: 1306038421, guid: 50768989c0d7b476bb16e803466cdb11, type: 3}
+  healthChange: 0
+  moveSpeedChange: 0
+  attackSpeedChange: 0
+  bulletSizeChange: 0
+  bulletNum: 3
 --- !u!1001 &5940532001158668033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1985,6 +2096,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangedEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5830459502060991046, guid: 1426774ef48e74acfbd19015d502f53a, type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830459502060991046, guid: 1426774ef48e74acfbd19015d502f53a, type: 3}
+      propertyPath: playerPos
+      value: 
+      objectReference: {fileID: 736096760}
     - target: {fileID: 7937587993827215860, guid: 1426774ef48e74acfbd19015d502f53a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.22
@@ -2123,6 +2242,7 @@ MonoBehaviour:
   moveSpeedChange: 0
   attackSpeedChange: 0
   bulletSizeChange: 0
+  bulletNum: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2141,3 +2261,4 @@ SceneRoots:
   - {fileID: 369951070}
   - {fileID: 1227048798}
   - {fileID: 2113097899}
+  - {fileID: 4264981315197984907}

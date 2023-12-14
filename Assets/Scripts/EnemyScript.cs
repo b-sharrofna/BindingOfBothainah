@@ -34,6 +34,8 @@ public class EnemyScript : MonoBehaviour
     public float coolDown;
     public Animator animator;
     public int numOfBullets = 0;
+    //public Transform playerPos;
+    //public Vector2 relativePoint;
 
 
     public GameObject bulletPreFab; 
@@ -41,11 +43,20 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       /* relativePoint = transform.InverseTransformPoint(playerPos.position);
+        if (relativePoint.x > 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
+        {
+            Debug.Log("Left");
+            animator.SetBool("isLeft", true);
+        }*/
+
         switch (currState)
         {
             case (EnemyState.Idle):
@@ -153,7 +164,7 @@ public class EnemyScript : MonoBehaviour
         coolDownAttack = true;
         yield return new WaitForSeconds(coolDown);
         coolDownAttack = false;
-        animator.SetBool("IsAttacking", false);
+        //animator.SetBool("IsAttacking", false);
     }
 
     private IEnumerator AttackFalse()
@@ -168,7 +179,7 @@ public class EnemyScript : MonoBehaviour
         {
             case (EnemyType.Boss):
                 numOfBullets++;
-                if(numOfBullets == 10)
+                if(numOfBullets == 30)
                 {
                     Destroy(gameObject);
                     //SceneManager.LoadScene(7);
