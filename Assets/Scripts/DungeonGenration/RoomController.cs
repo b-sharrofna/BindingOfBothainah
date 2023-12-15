@@ -149,7 +149,7 @@ public class RoomController : MonoBehaviour
     {
         string[] possbileRooms = new string[]
         {
-            "Empty",
+            //"Empty",
             "Basic"
         };
 
@@ -161,6 +161,7 @@ public class RoomController : MonoBehaviour
         CamerController.instance.currRoom = room;
         currentRoom = room;
 
+        //UpdateRooms(); 
         StartCoroutine(RoomCoroutine());
     }
     public IEnumerator RoomCoroutine()

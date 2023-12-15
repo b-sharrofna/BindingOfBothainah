@@ -101,13 +101,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currState: 0
   enemyType: 0
-  range: 10
+  range: 8
   speed: 1
   bulletSpeed: 0
   attackingRnage: 1
   notInRoom: 0
   coolDown: 2
-  animator: {fileID: 0}
+  animator: {fileID: 7394616839472271732}
+  numOfBullets: 0
   bulletPreFab: {fileID: 0}
 --- !u!61 &2433625350634389740
 BoxCollider2D:

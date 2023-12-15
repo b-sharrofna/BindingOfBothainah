@@ -34,8 +34,7 @@ public class EnemyScript : MonoBehaviour
     public float coolDown;
     public Animator animator;
     public int numOfBullets = 0;
-    //public Transform playerPos;
-    //public Vector2 relativePoint;
+    
 
 
     public GameObject bulletPreFab; 
@@ -50,12 +49,14 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       /* relativePoint = transform.InverseTransformPoint(playerPos.position);
-        if (relativePoint.x > 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
+        if (gameObject.transform.position.x > player.transform.position.x)
         {
-            Debug.Log("Left");
             animator.SetBool("isLeft", true);
-        }*/
+        }
+        else
+        {
+            animator.SetBool("isLeft", false);
+        }
 
         switch (currState)
         {
@@ -152,6 +153,10 @@ public class EnemyScript : MonoBehaviour
                 break;
                 case (EnemyType.Boss):
                     GameController.DamagePlayer(2);
+                    GameObject bullet1 = Instantiate(bulletPreFab, transform.position, Quaternion.identity) as GameObject;
+                    bullet1.GetComponent<BulletScript>().GetPlayer(player.transform);
+                    bullet1.AddComponent<Rigidbody2D>().gravityScale = 0;
+                    bullet1.GetComponent<BulletScript>().isEnemyBullet = true;
                     StartCoroutine(CoolDown());
                 break;
             }
@@ -182,7 +187,8 @@ public class EnemyScript : MonoBehaviour
                 if(numOfBullets == 30)
                 {
                     Destroy(gameObject);
-                    //SceneManager.LoadScene(7);
+                    SceneManager.LoadScene(7);
+                   
                 }
                 break;
             case (EnemyType.Melee):
